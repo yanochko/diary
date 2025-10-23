@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ежедневник</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Ежедневник</h1>
+  </header>
+
+  <main>
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Название задачи" required />
+      <textarea id="task-description" placeholder="Описание"></textarea>
+      <button type="submit">Добавить</button>
+    </form>
+
+    <div id="task-list"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
