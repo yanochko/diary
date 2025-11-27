@@ -1,22 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('✅ Скрипт загружен');
-
     const form = document.getElementById('task-form');
     const tasksList = document.getElementById('tasks-list');
 
-    // Проверка наличия элементов
-    if (!form) {
-        console.error('❌ Форма не найдена!');
-        return;
-    }
-    if (!tasksList) {
-        console.error('❌ Список задач не найден!');
-        return;
-    }
-
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        console.log('📝 Форма отправлена');
 
         const titleInput = document.getElementById('task-title');
         const descriptionInput = document.getElementById('task-description');
@@ -41,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Добавляем в список
         tasksList.appendChild(taskCard);
-        console.log('✅ Задача добавлена');
 
         // Очищаем форму
         titleInput.value = '';
@@ -52,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (deleteBtn) {
             deleteBtn.addEventListener('click', function() {
                 taskCard.remove();
-                console.log('🗑️ Задача удалена');
             });
         }
     });
